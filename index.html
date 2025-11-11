@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Priyanshu Gurjar — Researcher & Data Scientist</title>
-  <meta name="description" content="Personal site: publications, patents, projects, contact." />
+  <meta name="description" content="Personal site: Publications, Patents, Github, Kaggle, contact." />
   <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   <style>
     :root{--accent:#2563eb;--bg:#0f172a;--card:#0b1220;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
@@ -50,8 +50,9 @@
         </div>
         <div class="navlinks">
           <a class="btn" href="https://iipseries.org/assets/docupload/rsl20245C754C7610AE339.pdf">Publications</a>
-          <a class="btn" href="#https://search.ipindia.gov.in/IPOJournal/Journal/Patent">Patents</a>
-          <a class="btn" href="#projects">Projects</a>
+          <a class="btn" href="https://search.ipindia.gov.in/IPOJournal/Journal/Patent">Patents</a>
+          <a class="btn" href="https://github.com/priyanshugurjar9">Github</a>
+          <a class="btn" href="https://www.kaggle.com/priyanshugurjar9">Kaggle</a>
           <a class="btn" href="priyanshugurjar889@gmail.com">Contact</a>
         </div>
       </nav>
@@ -61,12 +62,12 @@
   <main class="container">
     <section class="hero">
       <div>
-        <h1>Hi — I'm Priyanshu. I build ML systems and research applications that solve real problems.</h1>
+        <h1>I am Priyanshu Gurjar, pursuing an MSc in Data Science at the University of Bristol as a Think Big Scholar. My research focuses on Bayesian Machine Learning, Continual Learning, and Responsible AI, aiming to build adaptive and interpretable models for reliable decision-making.
+Previously, I earned my B.Tech. in Information Technology from Manipal University Jaipur, where my work on audio sentiment analysis led to a patent and a book publication. I have professional experience as a Data Science Consultant and Data Scientist, applying statistical and machine-learning methods to solve real-world challenges. </h1>
         <p class="lead">I work at the intersection of machine learning, data engineering, and product. Here you can find my publications, patents, selected projects and contact information.</p>
         <div style="margin-top:18px;display:flex;gap:10px">
-          <a class="btn" href="#projects">See projects</a>
-          <a class="btn" href="#publications">See publications</a>
-          <a class="btn" href="/CV.pdf" target="_blank">Download CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/priyanshugurjar/">LinkedIn</a>
+          <a class="btn" href="https://iipseries.org/assets/docupload/rsl20245C754C7610AE339.pdf">Publications</a>
         </div>
       </div>
     </section>
@@ -75,13 +76,18 @@
       <section class="main card">
         <article id="publications">
           <h3>Publications</h3>
-          <p class="muted">Selected peer-reviewed papers and conference articles.</p>
+          <p class="muted">Book: Futuristic Trends of Information Technology Volume 3 Book 2, e-ISBN Published: 25/02/2024
+            Abstract: Developed a probabilistic machine learning system for audio sentiment recognition, leveraging GMM-UBM with
+MAP adaptation for likelihood-based speaker modeling, and DNN-based emotion classification with statistically informed
+regularization, achieving 70% testing accuracy on RAVDESS.
+            Published and presented findings at IIP Series, Kolkata, India, contributing to speaker-independent sentiment classification
+and informing scalable decision-making systems for healthcare and sustainability.</p>
           <ul id="pub-list" class="clean" style="margin-top:12px"></ul>
         </article>
 
         <article id="patents" style="margin-top:20px">
           <h3>Patents</h3>
-          <p class="muted">Granted patents and patent applications.</p>
+          <p class="muted">Application No. 202311064172 A, filed: 25/09/2023, Published: 13/10/2023</p>
           <ul id="patent-list" class="clean" style="margin-top:12px"></ul>
         </article>
 
@@ -111,25 +117,14 @@
           </div>
           <div style="margin-top:12px">
             <div class="muted">Contact</div>
-            <div style="margin-top:6px">Email: <a href="mailto:priyanshu@example.com">priyanshu@example.com</a></div>
-            <div style="margin-top:6px">GitHub: <a href="https://github.com/your-username" target="_blank">@your-username</a></div>
+            <div style="margin-top:6px">Email: <a href="mailto:priyanshu@example.com">priyanshugurjar889@gmail.com</a></div>
           </div>
-        </div>
-
-        <div class="card">
-          <h4 style="margin-top:0">Quick links</h4>
-          <ul class="clean" style="margin-top:10px">
-            <li class="muted">Google Scholar • <a href="#">link</a></li>
-            <li class="muted">ORCID • <a href="#">link</a></li>
-            <li class="muted">LinkedIn • <a href="#">link</a></li>
-          </ul>
-        </div>
       </aside>
     </div>
 
     <section id="contact" style="margin-top:20px" class="card">
       <h3>Contact</h3>
-      <p class="muted">Interested in collaboration, internships, or research questions — send a note.</p>
+      <p class="muted">Quick Questions.</p>
       <form onsubmit="alert('Replace this with your form receiver (Formspree/Netlify/Google Forms).');return false" style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
         <input name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"/>
         <input name="email" placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"/>
@@ -142,21 +137,18 @@
 
   <footer class="container">
     <div style="display:flex;justify-content:space-between;align-items:center">
-      <div class="muted">© " + new Date().getFullYear() + " Priyanshu Gurjar</div>
-      <div class="muted">Built with HTML • Hosted on GitHub Pages</div>
+      <div class="muted">©Priyanshu Gurjar</div>
     </div>
   </footer>
 
   <script>
     // === Replace the arrays below with your real publications/patent data ===
     const publications = [
-      {title: "Example paper title", authors: "P. Gurjar, A. Researcher", venue: "ICML 2025", url: "#", note:"best paper"},
-      {title: "Another paper", authors: "P. Gurjar", venue: "NeurIPS 2024", url: "#"}
+      {title: "ASA: Audio Sentiment Analysis After a Single-Channel Multiple Source Separation", authors: "P. Gurjar, Dr.A. Bhatnagar", venue: "IIP Series 2024", url: "https://iipseries.org/assets/docupload/rsl20245C754C7610AE339.pdf"}
     ];
 
     const patents = [
-      {title: "Smart etching for chips", number: "GB1234567", status: "Granted", url: "#"},
-      {title: "Efficient sensor calibration", number: "WO2024/000000", status: "Filed", url: "#"}
+      {title: "Single-Channel Multiple Source Separation Using Audio Sentiment Analysis", Number: "202311064172", status: "Granted", url: "https://search.ipindia.gov.in/IPOJournal/Journal/Patent"}
     ];
 
     function renderList(id, items, type){
