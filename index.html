@@ -1,220 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Priyanshu Gurjar | Researcher & Data Scientist</title>
-  <meta name="description" content="I am Priyanshu Gurjar, an MSc Data Science student at the University of Bristol and Think Big Scholar. My focus is on Bayesian Machine Learning, Continual Learning, and Responsible AI.">
-  <link rel="icon" href="IMG_0132.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyanshu Gurjar | Researcher & Data Scientist</title>
+<link rel="icon" href="IMG_0132.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: linear-gradient(180deg,#0b1121 0%,#111827 100%); color:#e5e7eb; }
+  a { color:#60a5fa; text-decoration:none; transition:0.2s; }
+  a:hover { color:#2563eb; }
 
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg,#0b1121 0%,#111827 100%);
-      color: #e5e7eb;
-    }
-    a { color: #60a5fa; text-decoration:none; transition: 0.2s; }
-    a:hover { color: #2563eb; }
+  header {
+    position: fixed;
+    top:0; left:0; right:0;
+    background: rgba(11,17,33,0.9);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:15px 30px;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(8px);
+  }
+  header img { width:60px; height:60px; border-radius:50%; border:2px solid #2563eb; object-fit:cover; }
+  header h1 { font-size:1.3rem; margin-left:12px; font-weight:700; }
+  nav a { margin-left:12px; padding:6px 12px; border-radius:6px; background: rgba(255,255,255,0.05); font-weight:500; }
+  nav a:hover { background:#2563eb; color:white; }
 
-    header {
-      position: fixed;
-      top:0;
-      width: 100%;
-      background: rgba(11,17,33,0.9);
-      padding: 15px 20px;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      width:50px; height:50px; border-radius:50%;
-      border:2px solid #2563eb;
-      object-fit: cover;
-    }
-    header h1 {
-      font-size:1.2rem; font-weight:700; margin-left:10px;
-    }
-    nav a {
-      margin-left:12px; padding:5px 10px;
-      border-radius:6px; font-weight:500;
-      background: rgba(255,255,255,0.05);
-    }
-    nav a:hover { background:#2563eb; color:white; }
+  section {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    text-align:center;
+    transition: background 0.3s;
+  }
 
-    section {
-      padding: 80px 20px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      max-width: 850px;
-      margin: 0 auto;
-    }
-    section h2 {
-      font-size:1.8rem; margin-bottom:16px;
-      border-left: 4px solid #2563eb; padding-left:10px;
-    }
+  section:nth-child(even) { background: rgba(255,255,255,0.02); }
 
-    section p, li { color: #cbd5e1; line-height:1.6; }
-    ul { list-style:none; margin-top:10px; padding-left:0; }
-    li {
-      background: rgba(255,255,255,0.03);
-      margin:8px 0;
-      padding:12px;
-      border-radius:8px;
-      transition: transform 0.2s, background 0.2s;
-    }
-    li:hover { transform: translateY(-4px); background: rgba(37,99,235,0.2); }
+  h2 { font-size:2rem; margin-bottom:20px; border-left:4px solid #2563eb; padding-left:10px; }
+  p, li { color:#cbd5e1; line-height:1.6; }
+  ul { list-style:none; margin-top:10px; padding-left:0; max-width:700px; }
+  li {
+    background: rgba(255,255,255,0.03);
+    margin:10px 0;
+    padding:14px;
+    border-radius:8px;
+    transition: transform 0.2s, background 0.2s;
+    text-align:left;
+  }
+  li:hover { transform: translateY(-4px); background: rgba(37,99,235,0.2); }
 
-    .highlight { color: #60a5fa; font-weight:600; }
+  .highlight { color:#60a5fa; font-weight:600; }
 
-    footer {
-      text-align:center;
-      padding:30px 20px;
-      border-top:1px solid rgba(255,255,255,0.05);
-      color:#9ca3af;
-      font-size:14px;
-    }
+  footer { text-align:center; padding:30px; border-top:1px solid rgba(255,255,255,0.05); color:#9ca3af; font-size:14px; }
 
-    /* Section background stripes for visual separation */
-    #B, #D, #F { background: rgba(255,255,255,0.02); border-radius:12px; }
-
-    @media(max-width: 600px) {
-      header { flex-direction: column; align-items: flex-start; }
-      nav { margin-top:10px; }
-      header img { margin-bottom: 8px; }
-    }
-  </style>
+  @media(max-width: 600px){
+    header { flex-direction: column; align-items: flex-start; padding:10px 15px; }
+    nav { margin-top:10px; }
+    header img { margin-bottom:8px; }
+    h2 { font-size:1.6rem; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div style="display:flex; align-items:center;">
-      <img src="IMG_0132.jpg" alt="Priyanshu Gurjar">
-      <h1>Priyanshu Gurjar</h1>
-    </div>
-    <nav>
-      <a href="#A">About</a>
-      <a href="#B">Research</a>
-      <a href="#C">Publications</a>
-      <a href="#D">Patents</a>
-      <a href="#E">Work</a>
-      <a href="#F">Projects</a>
-      <a href="#G">Contact</a>
-    </nav>
-  </header>
+<header>
+  <div style="display:flex; align-items:center;">
+    <img src="IMG_0132.jpg" alt="Priyanshu Gurjar">
+    <h1>Priyanshu Gurjar</h1>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#patents">Patents</a>
+    <a href="#work">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- About Me -->
-  <section id="A">
-    <h2>About Me</h2>
-    <p>I am <span class="highlight">Priyanshu Gurjar</span>, pursuing an MSc in Data Science at the <b>University of Bristol</b> as a THINK BIG INTERNATIONAL SCHOLAR. 
-    My research focuses on <b>Bayesian Statistics</b>, <b>Continual Learning</b>, <b>Causal Learning</b>, <b>Responsible Data Science</b>, <b>Catastrophic Forgetting</b>, and <b>Computational Methods for AI</b>. 
-    I develop adaptive, interpretable, and reliable AI systems that learn continuously while retaining prior knowledge.  
-    Previously, I earned my B.Tech in Information Technology from Manipal University Jaipur, where my work on <b>Audio Sentiment Analysis</b> led to a patent and a peer-reviewed publication.</p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am <span class="highlight">Priyanshu Gurjar</span>, pursuing an MSc in Data Science at the <b>University of Bristol</b> as a THINK BIG INTERNATIONAL SCHOLAR. 
+  My research focuses on <b>Bayesian Statistics</b>, <b>Continual Learning</b>, <b>Causal Learning</b>, <b>Responsible Data Science</b>, <b>Catastrophic Forgetting</b>, and <b>Computational Methods for AI</b>. 
+  I develop adaptive, interpretable, and reliable AI systems that learn continuously while retaining prior knowledge. Previously, I earned my B.Tech from Manipal University Jaipur, where my work on <b>Audio Sentiment Analysis</b> led to a patent and peer-reviewed publication.</p>
+</section>
 
-  <!-- Research -->
-  <section id="B">
-    <h2>Research</h2>
-      <li>Bayesian Machine Learning & Probabilistic Inference</li>
-      <li>Continual & Lifelong Learning</li>
-      <li>Reinforcement Learning & Interactive AI</li>
-      <li>Responsible and Explainable AI</li>
-      <li>Computational Methods for Adaptive Decision Systems</li>
-  </section>
+<section id="research">
+  <h2>Research</h2>
+  <ul>
+    <li>Bayesian Machine Learning & Probabilistic Inference</li>
+    <li>Continual & Lifelong Learning</li>
+    <li>Reinforcement Learning & Interactive AI</li>
+    <li>Responsible and Explainable AI</li>
+    <li>Computational Methods for Adaptive Decision Systems</li>
+  </ul>
+</section>
 
-  <!-- Publications -->
-  <section id="C">
-    <h2>Publications</h2>
-    <ul>
-      <li>
-        <b>ASA: Audio Sentiment Analysis After a Single-Channel Multiple Source Separation</b><br>
-        <i>Book: Futuristic Trends of Information Technology Volume 3 Book 2, e-ISBN Published: 25/02/2024</i><br>
-        Published and presented findings at IIP Series, Kolkata, India, contributing to speaker-independent sentiment classification and informing scalable decision-making systems for healthcare and sustainability.  
-        <a href="https://iipseries.org/assets/docupload/rsl20245C754C7610AE339.pdf" target="_blank">[Publication]</a>
-      </li>
-    </ul>
-  </section>
+<section id="publications">
+  <h2>Publications</h2>
+  <ul>
+    <li>
+      <b>ASA: Audio Sentiment Analysis After a Single-Channel Multiple Source Separation</b><br>
+      <i>Book: Futuristic Trends of Information Technology Volume 3 Book 2, e-ISBN Published: 25/02/2024</i><br>
+      Published at IIP Series, Kolkata, India. <a href="https://iipseries.org/assets/docupload/rsl20245C754C7610AE339.pdf" target="_blank">[Publication]</a>
+    </li>
+  </ul>
+</section>
 
-  <!-- Patents -->
-  <section id="D">
-    <h2>Patents</h2>
-  
-      <li>
-        <b>Single-Channel Multiple Source Separation Using Audio Sentiment Analysis</b><br>
-        Application No. <b>202311064172 A</b> — Published: 13/10/2023<br>
-        <a href="https://search.ipindia.gov.in/IPOJournal/Journal/Patent" target="_blank">[Patent]</a>
-      </li>
+<section id="patents">
+  <h2>Patents</h2>
+  <ul>
+    <li>
+      <b>Single-Channel Multiple Source Separation Using Audio Sentiment Analysis</b><br>
+      Application No. <b>202311064172 A</b> — Published: 13/10/2023<br>
+      <a href="https://search.ipindia.gov.in/IPOJournal/Journal/Patent" target="_blank">[Patent]</a>
+    </li>
+  </ul>
+</section>
 
-  </section>
+<section id="work">
+  <h2>Work Experience</h2>
+  <ul>
+    <li>
+      <b>Data Science Consultant — 180 Degrees Consulting, Bristol, UK (2025 - Present)</b><br>
+      • Statistical data cleaning, exploratory analysis, uncertainty assessment.<br>
+      • ML-powered automated data entry system as Python web app.<br>
+      • Communicated insights ensuring responsible and interpretable use.
+    </li>
+    <li>
+      <b>Data Scientist — RentPrompts, Indore, India (2024-2025)</b><br>
+      • Optimized Python & SQL pipelines for large-scale data processing.<br>
+      • Deployed ML/NLP models with Tableau dashboards.<br>
+      • Applied statistical inference to validate performance.
+    </li>
+    <li>
+      <b>Research Assistant — Manipal University Jaipur, India (2023)</b><br>
+      • Audio sentiment recognition research using probabilistic & neural models.<br>
+      • 70% testing accuracy on RAVDESS dataset.<br>
+      • Work resulted in patent & peer-reviewed publication.
+    </li>
+  </ul>
+</section>
 
-  <!-- Work Experience -->
-  <section id="E">
-    <h2>Work Experience</h2>
-    <ul>
-      <li>
-        <b>Data Science Consultant — 180 Degrees Consulting, Bristol, UK (2025 - Present)</b><br>
-        • Statistical data cleaning, exploratory analysis, and uncertainty assessment.<br>
-        • Built ML-powered automated data entry system as a Python web app.<br>
-        • Communicated insights ensuring responsible and interpretable use.
-      </li>
-      <li>
-        <b>Data Scientist — RentPrompts, Indore, India (2024-2025)</b><br>
-        • Optimized Python & SQL pipelines for large-scale data processing, reducing runtime by 30%.<br>
-        • Deployed ML/NLP models with Tableau dashboards for data-driven decisions.<br>
-        • Applied statistical inference to validate model performance.
-      </li>
-      <li>
-        <b>Research Assistant — Manipal University Jaipur, India (2023)</b><br>
-        • Conducted research on audio sentiment recognition with probabilistic & neural models.<br>
-        • Achieved 70% testing accuracy on RAVDESS dataset.<br>
-        • Work resulted in patent and peer-reviewed publication.
-      </li>
-    </ul>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <b>Predictive Analytics for Financial Customer Retention</b><br>
+      • Explainable ANN with 86% accuracy.<br>
+      • Statistical validation for personalized financial decisions. <a href="https://www.kaggle.com/code/priyanshugurjar9/credit?scriptVersionId=240070641" target="_blank">[Code]</a>
+    </li>
+    <li>
+      <b>Detecting & Mitigating Global Misinformation Using NLP & AI</b><br>
+      • Predictive models with Google Generative APIs.<br>
+      • Statistical inference for reliable classification. <a href="https://github.com/priyanshugurjar9/Fakeit" target="_blank">[Repo]</a>
+    </li>
+    <li>
+      <b>SEEALL – Personalized Recommendation Engine</b><br>
+      • NLP-based recommendation engine with 80–85% accuracy.<br>
+      • Real-time predictions deployment. <a href="https://github.com/priyanshugurjar9/seeall" target="_blank">[GitHub]</a>
+    </li>
+  </ul>
+</section>
 
-  <!-- Projects -->
-  <section id="F">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <b>Predictive Analytics for Financial Customer Retention</b><br>
-        • Developed explainable ANN with 86% accuracy.<br>
-        • Applied statistical validation techniques for personalized financial decision-making. <a href="https://www.kaggle.com/code/priyanshugurjar9/credit?scriptVersionId=240070641" target="_blank">[Code]</a>
-      </li>
-      <li>
-        <b>Detecting & Mitigating Global Misinformation Using Real-Time NLP & AI</b><br>
-        • Built predictive models using Google Generative APIs & NLP.<br>
-        • Applied statistical inference for reliable classification. <a href="https://github.com/priyanshugurjar9/Fakeit" target="_blank">[Repo]</a>
-      </li>
-      <li>
-        <b>SEEALL – Personalized Recommendation Engine</b><br>
-        • NLP-based recommendation engine achieving 80–85% accuracy.<br>
-        • Tested scalability and deployed solution for real-time predictions. <a href="https://github.com/priyanshugurjar9/seeall" target="_blank">[GitHub]</a>
-      </li>
-    </ul>
-  </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:priyanshugurjar889@gmail.com">priyanshugurjar889@gmail.com</a><br>
+  Phone: +44-7470-602193<br>
+  <a href="https://www.linkedin.com/in/priyanshugurjar/" target="_blank">LinkedIn</a> | 
+  <a href="https://github.com/priyanshugurjar9" target="_blank">GitHub</a> | 
+  <a href="https://www.kaggle.com/priyanshugurjar9" target="_blank">Kaggle</a></p>
+</section>
 
-  <!-- Contact -->
-  <section id="G">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:priyanshugurjar889@gmail.com">priyanshugurjar889@gmail.com</a><br>
-    Phone: +44-7470-602193<br>
-    <a href="https://www.linkedin.com/in/priyanshugurjar/" target="_blank">LinkedIn</a> | 
-    <a href="https://github.com/priyanshugurjar9" target="_blank">GitHub</a> | 
-    <a href="https://www.kaggle.com/priyanshugurjar9" target="_blank">Kaggle</a></p>
-  </section>
-
-  <footer>
-    © 2025 Priyanshu Gurjar — All rights reserved.
-  </footer>
+<footer>
+  © 2025 Priyanshu Gurjar — All rights reserved.
+</footer>
 
 </body>
-</html>
+</html>>
