@@ -25,44 +25,39 @@
       top:0;
       width: 100%;
       background: rgba(11,17,33,0.9);
-      padding: 20px 0;
+      padding: 15px 20px;
       z-index: 1000;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     header img {
-      width:60px; height:60px; border-radius:50%;
+      width:50px; height:50px; border-radius:50%;
       border:2px solid #2563eb;
       object-fit: cover;
-      vertical-align: middle;
-      margin-left:20px;
     }
     header h1 {
-      display:inline-block; vertical-align: middle; margin-left:10px;
-      font-size:1.4rem; font-weight:700;
-    }
-    nav {
-      display:inline-block; float:right; margin-right:20px;
+      font-size:1.2rem; font-weight:700; margin-left:10px;
     }
     nav a {
-      margin-left:15px; padding:6px 12px;
+      margin-left:12px; padding:5px 10px;
       border-radius:6px; font-weight:500;
       background: rgba(255,255,255,0.05);
     }
     nav a:hover { background:#2563eb; color:white; }
 
     section {
-      min-height: 100vh;
-      padding: 120px 20px 60px;
+      padding: 80px 20px 40px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      max-width: 900px;
+      justify-content: flex-start;
+      max-width: 850px;
       margin: 0 auto;
     }
-
     section h2 {
-      font-size:2rem; margin-bottom:20px;
+      font-size:1.8rem; margin-bottom:16px;
       border-left: 4px solid #2563eb; padding-left:10px;
     }
 
@@ -70,33 +65,41 @@
     ul { list-style:none; margin-top:10px; padding-left:0; }
     li {
       background: rgba(255,255,255,0.03);
-      margin:10px 0;
-      padding:15px;
+      margin:8px 0;
+      padding:12px;
       border-radius:8px;
-      transition: transform 0.2s;
+      transition: transform 0.2s, background 0.2s;
     }
-    li:hover { transform: translateY(-5px); background: rgba(37,99,235,0.2); }
+    li:hover { transform: translateY(-4px); background: rgba(37,99,235,0.2); }
 
     .highlight { color: #60a5fa; font-weight:600; }
 
     footer {
       text-align:center;
-      padding:40px 20px;
+      padding:30px 20px;
       border-top:1px solid rgba(255,255,255,0.05);
       color:#9ca3af;
+      font-size:14px;
     }
 
     /* Section background stripes for visual separation */
     #B, #D, #F { background: rgba(255,255,255,0.02); border-radius:12px; }
 
+    @media(max-width: 600px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { margin-top:10px; }
+      header img { margin-bottom: 8px; }
+    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <img src="IMG_0132.jpg" alt="Priyanshu Gurjar">
-    <h1>Priyanshu Gurjar</h1>
+    <div style="display:flex; align-items:center;">
+      <img src="IMG_0132.jpg" alt="Priyanshu Gurjar">
+      <h1>Priyanshu Gurjar</h1>
+    </div>
     <nav>
       <a href="#A">About</a>
       <a href="#B">Research</a>
@@ -215,7 +218,5 @@
     © 2025 Priyanshu Gurjar — All rights reserved.
   </footer>
 
-</body>
-</html>
 </body>
 </html>
